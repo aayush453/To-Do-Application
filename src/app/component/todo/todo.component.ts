@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { todoItem } from '../../model/toDo.model';
 
 @Component({
@@ -11,7 +10,7 @@ export class TodoComponent implements OnInit {
   toDoList: todoItem[] = [];
   newTask: string = '';
 
-  constructor(private fb: FormBuilder) {}
+  constructor() {}
 
   ngOnInit(): void {
   }
