@@ -1,0 +1,14 @@
+<main class="todo-container">
+    <div class="add-task">
+        <input [(ngModel)]="newTask" placeholder="Enter task"/>
+        <button (click)="addtask()"> Add </button>
+    </div>
+
+    <ul class="task-list">
+        <li *ngFor="let toDoItems of toDoList; let i=index" [ngClass]="{'completed': toDoItems.completed}" >
+            <input type="checkbox" (change)="toggleCompleted(i)"/>
+            <span [class.completed]="toDoItems.completed">{{toDoItems.task}}</span>
+            <button (click)="deleteTask(toDoItems.id)">Delete</button>
+        </li>
+    </ul>
+</main>
